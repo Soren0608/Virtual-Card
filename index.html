@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="index.css" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+        <title>Virtual Valentine's Day Card</title>
+    </head>
+    <body>
+        
+        <div class="corner-images">
+            <img src="images/kuromi.png" class="corner top-left" alt="Kuromi">
+            <img src="images/kuromi2.png" class="corner top-right" alt="Imagen 2">
+            <img src="images/kuromi3.png" class="corner bottom-left" alt="Imagen 3">
+            <img src="images/kuromi4.png" class="corner bottom-right" alt="Imagen 4">
+        </div>
+        <div class="envelope-wrapper">
+            <div id="envelope" class="close">
+                <div class="front flap"></div>
+                <div class="front pocket"></div>
+                <div class="letter">
+                    <p class="words line1">Feliz Dia,</p>
+                    <p class="words line2">Recuerda que tu tambien pintas recuerdos en el corazon de las personas</p>
+                    <p class="words line3">Mereces lo mejor</p>
+                    <p class="words line4">C.S</p>
+                </div>
+                <div class="hearts">
+                    <div class="heart a1"></div>
+                    <div class="heart a2"></div>
+                    <div class="heart a3"></div>
+                </div>
+            </div>
+        </div>
+        <div class="reset">
+            <button id="open">Abrir</button>
+            <button id="reset">Reset</button>
+        </div>
+        <div class="music-controls">
+            <button onclick="playMusic()">Play</button>
+            <button onclick="pauseMusic()">Pause</button>
+            <input type="range" id="volume-control" min="0" max="1" step="0.1" value="1" onchange="setVolume(this.value)">
+        </div>
+        <audio id="background-music" src="audio/lillit.mp3" autoplay loop></audio>
+        <div class="fireworks" id="fireworks"></div>
+        <h1 class="valentine">Happy Birthday :3!</h1>
+        <script src="index.js"></script>
+    </body>
+    
+</html>
